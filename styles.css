@@ -1,0 +1,274 @@
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&family=Poppins:wght@400;500;600;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  main {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 1440px;
+    width: 100%;
+  }
+
+  .main {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    line-height: 27px;
+  }
+
+  .header {
+    width: 95%;
+    padding: 20px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+  }
+
+  .photo {
+    width: 400px;
+    object-fit: fill;
+    min-height: 500px;
+    
+  }
+
+  .photo img {
+    display: block;
+    width: 400px;
+    height: 500px;
+  }
+
+  .info-background {
+    position: relative;
+    top: -30px;
+    background-color: #F51B1B;
+    border-radius: 30px 30px 0 0;
+    padding: 20px;
+    width: 400px;
+    min-height: 500px;
+  }
+
+  .info-background::before {
+    content: url(images/arrowRed.svg);
+    display: block;
+    position: absolute;
+    top: -20.5px;
+    left: 30px;
+    width: 40px;
+  }
+
+  .info {
+    width: 90%;
+    margin: 40px auto;
+  }
+
+  .info ul {
+    padding-top: 40px;
+    list-style: none;
+  }
+
+  #name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  ul li, a {
+    display: flex;
+    gap: 10px;
+    white-space: normal;
+  }
+
+  ul img {
+    width: 24px;
+    height: 24px;
+  }
+
+  ul li {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .text-information {
+    margin-bottom: 30px;
+  }
+
+  .text-information p {
+    width: 80%;
+    padding: 10px 0;
+  }
+
+  .table-information {
+    width: 100%;
+    border: 1px solid white;
+    min-height: 650px;
+    position: relative;
+  }
+
+  .table-information::before {
+    content: url(images/arrowBlack.svg);
+    position: absolute;
+    top: -8px;
+    left: 100px;
+  }
+
+  .table-information span {
+    padding-bottom: 20px;
+  }
+
+  .table-block {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 30px 0;
+    margin-bottom: 5px;
+  }
+
+  .border-bottom {
+    border-bottom: 2px solid gray;
+    /* border-bottom-right-radius: 30px; */
+  }
+
+  .title {
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+  }
+
+  .content {
+    width: 70%;
+  }
+
+  .content div {
+    margin-bottom: 15px;
+  }
+
+  .grey-text {
+    color: rgba(128, 128, 128, 0.832);
+  }
+
+@media screen and (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .info-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+  }
+  .info-background {
+    border-radius: 30px 0 0 30px;
+    top: 0;
+    left: -30px;
+  }
+
+  .info-background::before {
+    transform: rotate(-90deg);
+    top: 380px;
+    left: -27.5px;
+  }
+  
+  .text-information p {
+    width: 95%;
+  }
+}
+
+
+@media screen and (max-width: 700px){
+  .header {
+    justify-content: flex-start;
+  }
+
+  .info-box {
+    flex-direction: column;
+  }
+
+  .info-background {
+    top: -30px;
+    left: 0;
+    background-color: #F51B1B;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .info-background::before {
+    transform: rotate(0);
+    top: -20.5px;
+    left: 30px;
+  }
+
+  .info-box {
+    padding-left: 0;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .table-block {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    font-size: 16px;
+  }
+
+  #name {
+    font-size: 25px;
+  }
+
+  .table-block {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .title, .content {
+    width: 100%;
+  }
+
+  .info-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .info-background, .photo, .photo img {
+    max-width: 340px;
+  }
+
+  .info-background::before {
+    top: -19px;
+    left: 10px;
+  }
+
+  .table-information::before {
+    top: -8px;
+    left: 130px;
+  }
+}
